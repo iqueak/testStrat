@@ -6,6 +6,9 @@
 #include "raylib.h"
 #include "string"
 
+#define RAYGUI_IMPLEMENTATION
+#include "raygui.h"
+
 using namespace std;
 
 //------------------------------------------------------------------------------------
@@ -14,6 +17,7 @@ using namespace std;
 
 int main(void)
 {
+
     // Initialization
     //--------------------------------------------------------------------------------------
     const int screenWidth = 800;
@@ -35,6 +39,10 @@ int main(void)
         // Draw
         //----------------------------------------------------------------------------------
         BeginDrawing();
+
+        if ( GuiButton( Rectangle{ 20, 20, 20, 20 }, "Press me!" ) ){
+            std::cout << "Pressed";
+        }
 
         ClearBackground(RAYWHITE);
 
