@@ -28,6 +28,6 @@ include_directories(src/vendor/)
 
 # Our Project
 
-add_executable(${PROJECT_NAME} src/main.cpp src/vendor/raygui.h)
+add_executable(${PROJECT_NAME} src/main.cpp src/vendor/raygui.h src/Client/GuiController.h src/Client/GuiController.cpp )
 #set(raylib_VERBOSE 1)
 target_link_libraries(${PROJECT_NAME} raylib)
